@@ -27,6 +27,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
+<!-- github implimentaion start -->
+<!-- Include the library. -->
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+<!-- github implimentaion ends -->
+
+
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom" data-offset="100">
     <div id="content" >
         <!-- Navigation -->
@@ -200,6 +214,23 @@
             <!-- Container-->
         </section>
         <!-- Section: Portfolio -->
+
+        <!-- Prepare a container for your calendar. -->
+        <div style="display:flex; flex-direction: column ; justify-content: center;">
+            <h2 style="font-size: 40px; font-weight: 500; text-align: center;">GitHub Stats</h2>
+            
+<div class="calendar">
+
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+<div style="display: flex; margin-top: 10px; gap: 10px; justify-content: center;">
+<img src="https://camo.githubusercontent.com/0485a135731978eb3f5583ec1b7acdc675c111919458868f8a39c277720eca01/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d736f7572372673686f775f69636f6e733d74727565266c6f63616c653d656e" 
+alt="github stats"  height="194px">
+<img src="https://camo.githubusercontent.com/07f3ccef9e56d5a49d57d508134439a1d05b174f7eaa956fdcf17efdb897a8cd/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d736f7572372673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374" 
+alt="github stats"  height="194px">
+</div>
+</div>
 
         <section id="portfolio">
             <div class="container">
@@ -490,6 +521,19 @@
         //      $(".everything").fadeIn(1000);
         //  });
         // });
+    </script>
+    <script>
+        GitHubCalendar(".calendar", "sour7");
+    
+        // or enable responsive functionality:
+        GitHubCalendar(".calendar", "sour7", { responsive: true });
+    
+        // Use a proxy
+        GitHubCalendar(".calendar", "sour7", {
+           proxy (sour7) {
+             return fetch(`https://your-proxy.com/github?user=${sour7}`)
+           }
+        }).then(r => r.text())
     </script>
 </body>
 
