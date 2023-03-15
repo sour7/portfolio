@@ -1159,8 +1159,14 @@ a.fa.fa-angle-down:focus {
     margin: 0 0 50px;
     line-height: 1.5;
 }
+.calendar{
+    border: 4px solid red;
+}
 .githubStats{
-display: flex; margin-top: 10px; gap: 10px; justify-content: center;
+display: flex;
+ margin-top: 10px;
+  gap: 10px; 
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1169,9 +1175,16 @@ display: flex; margin-top: 10px; gap: 10px; justify-content: center;
         margin-top: 30px;
         font-size: 16px;
     }
+    
     .githubStats{
         display: flex; flex-direction: column; margin-top: 10px; gap: 10px; justify-content: center;
         } 
+     .githubStats>div>img{
+       display: flex;
+       flex-direction: column;
+       width: 98vw;
+       justify-content: center;
+     }   
 }
 
 .skills-section .skill-icon {
@@ -1223,6 +1236,7 @@ display: flex; margin-top: 10px; gap: 10px; justify-content: center;
     .skills-section .skill-icon img#node {
         margin-top: -10px;
     }
+   
 }
 
 @media screen and (max-width: 450px) {
